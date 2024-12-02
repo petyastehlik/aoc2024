@@ -1,0 +1,13 @@
+{
+	"require": {
+		"tracy/tracy": "*",
+		"phpunit/phpunit": "*",
+		"phpstan/phpstan": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"AOC\\": "src/",
+			"Tests\\": "tests/"
+		}
+	}
+}
