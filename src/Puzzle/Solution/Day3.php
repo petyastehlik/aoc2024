@@ -18,7 +18,7 @@ final class Day3 implements IDay
         $lines = preg_split("/(don't\(\))|(do\(\))/", $input->read(), -1, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE);
 
         $enabled = true;
-        return (string)array_reduce($lines, function ($carry, $line) use (&$enabled): int {
+        return (string)array_reduce($lines, function (int $carry, string $line) use (&$enabled): int {
             match ($line) {
                 'do()' => $enabled = true,
                 'don\'t()' => $enabled = false,

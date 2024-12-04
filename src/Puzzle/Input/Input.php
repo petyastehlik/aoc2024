@@ -30,7 +30,7 @@ final readonly class Input
         return explode("\n", $this->read());
     }
 
-    public function readAsMatrix(): array
+    public function readAsArrayOfIntegers(): array
     {
         return array_map(fn(string $line) => array_map(fn(string $n) => (int)$n, explode(" ", $line)), $this->readAsLines());
     }

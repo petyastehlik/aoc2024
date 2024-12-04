@@ -11,13 +11,13 @@ final class Day2 implements IDay
 
     public function part1(Input $input): string
     {
-        $reports = $input->readAsMatrix();
+        $reports = $input->readAsArrayOfIntegers();
         return (string)count($this->findSatisfactory($reports));
     }
 
     public function part2(Input $input): string
     {
-        $reports = $input->readAsMatrix();
+        $reports = $input->readAsArrayOfIntegers();
         $satisfactory = $this->findSatisfactory($reports);
 
         $unsatisfactory = array_diff_key($reports, array_flip($satisfactory));
