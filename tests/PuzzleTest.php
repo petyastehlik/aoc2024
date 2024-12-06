@@ -42,8 +42,17 @@ final class PuzzleTest extends TestCase
         self::test(5, ['143', '6041'], ['123', '4884']);
     }
 
+    #[Test]
+    public function day6(): void
+    {
+        self::test(6, ['41', '5067'], ['6', '1793']);
+    }
+
     private static function test(int $day, array $part1, array $part2): void
     {
+        ini_set('display_errors', 1);
+        ini_set('error_reporting', E_ALL);
+
         self::assertEquals($part1[0], Runner::solve($day, Part::ONE, InputType::TEST), "Day $day, part 1, test");
         self::assertEquals($part1[1], Runner::solve($day, Part::ONE, InputType::FULL), "Day $day, part 1, full input");
 
